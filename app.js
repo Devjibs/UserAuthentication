@@ -67,7 +67,7 @@ app.get("/", function(req, res){
     res.render("index");
 });
 
-app.get("/signup", function(req, res){  ``
+app.get("/signup", function(req, res){
     res.render("signup");
 });
 
@@ -166,7 +166,6 @@ app.post("/index", function(req, res){
                 }
             } else {
                 res.render('404-store');
-                res.end()
             }
         }
     });
