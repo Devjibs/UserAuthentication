@@ -176,4 +176,5 @@ app.post("/index", function(req, res){
     
 });
 
-app.listen(PORT);
+port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
