@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/img/favicon.jpeg" />
+    <link rel="icon" href="assets/img/favicon.jpeg" />
+    <title>Create your online store with Markt Africa</title>
+    <link href="/css/main.css" rel="stylesheet" type="text/css"></link>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!--Google Fonts--> 
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amita:wght@700&display=swap" rel="stylesheet">
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript" src="../app.js"></script>
+    <script src="https://npmcdn.com/js-alert/dist/jsalert.min.js"></script>
+  </head>
+  <body>
+    <div id="loader"></div>
+    <div id="content">
+        <!-- Everything in your body should go under here-->
+        <div class="container px-4 py-5 mx-auto">
+          <div class="card card0">
+            <div class="d-flex flex-lg-row flex-column-reverse">
+              <div class="card card1">
+                <div class="row justify-content-center my-auto">
+                  <div class="col-md-8 col-10 my-5">
+                    <div class="row justify-content-center px-3 mb-3">
+                      <img id="logo" src="css/Logo.png" />
+                    </div>
+                    <h3 class="msg-info mt-5">Login to your store</h3>
+                    <form action="/index" method="POST">
+                    <div class="form-group d-flex">
+                      <input
+                        type="text"
+                        name="storename"
+                        placeholder="myshop"
+                        class="form-control"
+                      />
+                      <h6 class="mt-2">.gomarkt.store</h6>
+                    </div>
+                    <div class="row justify-content-center my-2 px-2">
+                      <button id="myButton" class="btn-block btn-color loglog">Login</button>
+                    </div>
+                  </form>
+                  </div>
+                </div>
+                <div class="text-center mb-2">
+                  <p href="#" class="sm-text mx-auto mb-3">
+                    Don't have an account?
+                    <a class="btn btn-white ml-2" href="signup"> Register </a>
+                  </p>
+                </div>
+              </div>
+              <div class="card card2">
+                <div class="my-auto mx-md-5 px-md-5 right">
+                  <div class="row justify-content-center px-3 mb-3">
+                    <img id="logo" src="css/cc.gif" />
+                  </div>
+                  <h3 class="text-white">Access your online marketplace</h3>
+                  <small class="text-white">Start making sales!</small>
+                  <div class="row justify-content-center my-3 px-3">
+                    <a
+                      class="btn-block btn-color text-center"
+                      target="_blank"
+                      href="https://gomarkt.store/pay/"
+                      >View Plans</a
+                    >
+                    <button
+                      class="btn-block btn-color text-center"
+                      style="outline: none"
+                      data-toggle="modal"
+                      data-target="#demoModal"
+                    >
+                      Check Demo
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="demoModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="demoModalCenterTitle"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="demoModalLongTitle">Demo</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h5>See website of our demo for your perusal</h5>
+                  <a
+                    class="btn-block btn-color text-center w-50 mx-auto"
+                    target="_blank"
+                    href="https://demo.gomarkt.store"
+                    >Website</a
+                  >
+                  <h5 class="mt-5">See a preview of your store admin dashboard</h5>
+                  <div class="row">
+                    <h6 class="mt-2 ml-3">Username: demo</h6>
+                    <h6 class="mt-2 ml-2">Password: demo</h6>
+                  </div>
+                  <a
+                    class="btn-block btn-color text-center w-50 mx-auto"
+                    target="_blank"
+                    href="https://demo.gomarkt.store/login/"
+                    >Dashboard</a
+                  >
+                  <h5 class="mt-5">Watch a video of our demo</h5>
+                  <a
+                    class="btn-block btn-color text-center w-50 mx-auto"
+                    href="#"
+                    >Video</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of body-->
+    </div>
+
+    <script>
+      $("#exampleModal").on("shown.bs.modal", function () {
+        $("#myInput").trigger("focus");
+      });
+    </script>
+
+<script>
+  var loader;
+  function loadNow(opacity){
+      if (opacity <= 0) {
+        displayContent();
+      } else {
+        loader.style.opacity = opacity;
+        window.setTimeout(function(){
+          loadNow(opacity - 0.05)
+        }, 100);
+  }
+}
+
+  function displayContent(){
+    loader.style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+  }
+
+  document.addEventListener("DOMContentLoaded", function(){
+    loader = document.getElementById("loader");
+    loadNow(1);
+  })
+
+</script>
+<script>
+  var storename = storename;
+  document.getElementById("myButton").onclick = function () {
+    location.href = "https://www.facebook.com";
+};
+</script>
+  </body>
+</html>
