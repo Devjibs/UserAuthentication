@@ -7,6 +7,10 @@ const ejs = require('ejs');
 const mongoose = require("mongoose");
 var nodemailer = require('nodemailer');
 
+const fs = require('fs')  
+const path = require('path')  
+const packagePath = path.resolve(__dirname, '..', 'package.json')
+
 example().then(function (data) {
     console.log("Promise Finished")
     console.log(data.toString())
