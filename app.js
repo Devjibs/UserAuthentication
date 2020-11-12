@@ -10,7 +10,7 @@ var nodemailer = require('nodemailer');
 //LgqCW1X6Snhm7ygx   GoMarktDB-Admin
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080 || 3000;
 
 //rendering app to use express js
 app.use(express.static("public"));
@@ -70,7 +70,7 @@ app.get("/", function(req, res){
     res.render("index");
 });
 
-app.get("/signup", function(req, res){  ``
+app.get("/signup", function(req, res){
     res.render("signup");
 });
 
@@ -176,6 +176,4 @@ app.post("/index", function(req, res){
     
 });
 
-app.listen(3000, function(){
-    console.log("Server is listening on port 3000");
-});
+app.listen(PORT);
