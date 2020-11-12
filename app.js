@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 var nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 //rendering app to use express js
 app.use(express.static("public"));
