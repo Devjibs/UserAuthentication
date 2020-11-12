@@ -6,9 +6,6 @@ const ejs = require('ejs');
 const mongoose = require("mongoose");
 var nodemailer = require('nodemailer');
 
-
-//LgqCW1X6Snhm7ygx   GoMarktDB-Admin
-
 const app = express();
 const PORT = process.env.PORT || 8080;
 
