@@ -70,7 +70,7 @@ app.get("/", function(req, res){
     res.render("index");
 });
 
-app.get("/signup", function(req, res){
+app.get("/signup", function(req, res){  ``
     res.render("signup");
 });
 
@@ -176,5 +176,6 @@ app.post("/index", function(req, res){
     
 });
 
-port_number = server.listen(process.env.PORT || 3000);
-app.listen(port_number);
+app.listen(3000, function(){
+    console.log("Server is listening on port 3000");
+});
