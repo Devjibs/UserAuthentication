@@ -2,12 +2,20 @@
 require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
+const example = require("./promise-and-callback");
 const ejs = require('ejs');
 const mongoose = require("mongoose");
 var nodemailer = require('nodemailer');
 
+example().then(function (data) {
+    console.log("Promise Finished")
+    console.log(data.toString())
+})
 
-//LgqCW1X6Snhm7ygx   GoMarktDB-Admin
+
+example(function (err, data) {
+    console.log("callback available")
+});
 
 const app = express();
 const PORT = process.env.PORT;
