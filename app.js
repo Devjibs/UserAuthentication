@@ -176,8 +176,5 @@ app.post("/index", function(req, res){
     
 });
 
-console.log(process.env.MARKTDLG);
-
-app.listen(3000, function(){
-    console.log("Server is listening on port 3000");
-});
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
