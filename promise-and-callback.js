@@ -8,7 +8,7 @@ function packageInfo (callback) {
     callback = callback || function () {}
 
     return new Promise((resolve, reject) => {
-        Fs.readFile(packagePath, (err, data) => {
+        fs.readFile(packagePath, (err, data) => {
         if (err) {
             // if no callback available, reject the promise
             // else, return callback using "error-first-pattern"
