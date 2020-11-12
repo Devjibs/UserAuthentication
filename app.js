@@ -10,7 +10,7 @@ var nodemailer = require('nodemailer');
 //LgqCW1X6Snhm7ygx   GoMarktDB-Admin
 
 const app = express();
-const PORT = process.env.PORT || 8080 || 3000;
+const PORT = process.env.PORT;
 
 //rendering app to use express js
 app.use(express.static("public"));
