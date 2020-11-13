@@ -176,18 +176,13 @@ app.post("/index", function(req, res){
             if (foundUser) {
                 if (foundUser.storename === storename) {
                     res.redirect(`https://${storename}.gomarkt.store/login`);
-                } else {
-                    res.status(409).json({error: "username already exists"});
-                }
+                } 
             } else {
                 res.status(409).json({error: "username already exists"});
-                res.end()
             }
         }
     });
     
 });
 
-app.listen(3000, function(req, res) {
-    console.log('server is listening on port')
-});
+app.listen(PORT);
