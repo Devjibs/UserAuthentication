@@ -102,7 +102,7 @@ app.post("/signup", function(req, res){
     newUser.save(function(err){
         if (err) {
             console.log(err);
-            res.write("<h1>Incorrect Signup Credentials, Please check your inputs and Try again</h1>");
+            res.status(409).json({error: "Invalid Signup Credentials"});
         } else {
             res.render("welcome");
             //Defining the variables to be used for email message
@@ -170,14 +170,14 @@ app.post("/index", function(req, res){
     User.findOne({storename: storename }, function (err, foundUser) { 
         if (err){ 
             console.log(err) 
-            res.status(409).json({error: "username already exists"});
+            res.render(404-bad-url);
         } else {
             if (foundUser) {
                 if (foundUser.storename === storename) {
                     res.redirect(`https://${storename}.gomarkt.store/login`);
                 } 
             } else {
-                res.status(409).json({error: "username already exists"});
+                res.status(409).json({error: "storename does not exist"});
             }
         }
     });
