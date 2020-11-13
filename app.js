@@ -22,7 +22,7 @@ example(function (err, data) {
 });
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 
 //rendering app to use express js
 app.use(express.static("public"));
@@ -188,6 +188,4 @@ app.post("/index", function(req, res){
     
 });
 
-app.listen(PORT, function(req, res) {
-    console.log('server is listening on port')
-});
+app.listen(PORT);
