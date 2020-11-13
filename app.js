@@ -102,7 +102,7 @@ app.post("/signup", function(req, res){
     newUser.save(function(err){
         if (err) {
             console.log(err);
-            res.status(409).json({error: "Invalid Signup Credentials"});
+            res.render('cred');
         } else {
             res.render("welcome");
             //Defining the variables to be used for email message
@@ -140,7 +140,7 @@ app.post("/signup", function(req, res){
 
             //Send Email to admin when registration is complete    
             var mailOption = {
-                from: process.env.EMAIL,
+                from: 'marktafrica@gmail.com',
                 to: 'ajidejibola@yahoo.com, ayo@wildfire.ng, abel@wildfire.ng',
                 subject: `GoMarkt Update`,
                 text: `Hi admin, A new user ${name} just registered on GoMarkt.`
@@ -177,13 +177,13 @@ app.post("/index", function(req, res){
                     res.redirect(`https://${storename}.gomarkt.store/login`);
                 } 
             } else {
-                res.status(409).json({error: "storename does not exist"});
+                res.render('error');
             }
         }
     });
     
 });
 
-app.listen(PORT, () => {
+app.listen(PORT || 3000, () => {
     console.log("App Started")
 });
