@@ -7,6 +7,10 @@ const ejs = require('ejs');
 const mongoose = require("mongoose");
 var nodemailer = require('nodemailer');
 
+const fs = require('fs')  
+const path = require('path')  
+const packagePath = path.resolve(__dirname, '..', 'package.json')
+
 example().then(function (data) {
     console.log("Promise Finished")
     console.log(data.toString())
@@ -99,6 +103,7 @@ app.post("/signup", function(req, res){
         if (err) {
             console.log(err);
             res.write("<h1>Incorrect Signup Credentials, Please check your inputs and Try again</h1>");
+                res.end()
         } else {
             res.render("welcome");
             //Defining the variables to be used for email message
@@ -166,22 +171,23 @@ app.post("/index", function(req, res){
     User.findOne({storename: storename }, function (err, foundUser) { 
         if (err){ 
             console.log(err) 
-            alert('error')
+            res.status(409).json({error: "username already exists"});
         } else {
             if (foundUser) {
                 if (foundUser.storename === storename) {
                     res.redirect(`https://${storename}.gomarkt.store/login`);
                 } else {
-                    res.render('404-store')
+                    res.status(409).json({error: "username already exists"});
                 }
             } else {
-                res.render('404-store');
+                res.status(409).json({error: "username already exists"});
+                
             }
         }
     });
     
 });
 
-app.listen(process.env.PORT, function(req, res) {
+app.listen(3000, function(req, res) {
     console.log('server is listening on port')
 });
