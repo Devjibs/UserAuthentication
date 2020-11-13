@@ -171,16 +171,16 @@ app.post("/index", function(req, res){
     User.findOne({storename: storename }, function (err, foundUser) { 
         if (err){ 
             console.log(err) 
-            alert('error')
+            res.status(409).json({error: "username already exists"});
         } else {
             if (foundUser) {
                 if (foundUser.storename === storename) {
                     res.redirect(`https://${storename}.gomarkt.store/login`);
                 } else {
-                    res.render('404-store')
+                    res.status(409).json({error: "username already exists"});
                 }
             } else {
-                res.render('404-store');
+                res.status(409).json({error: "username already exists"});
                 res.end()
             }
         }
@@ -188,4 +188,6 @@ app.post("/index", function(req, res){
     
 });
 
-app.listen(PORT);
+app.listen(3000, function(req, res) {
+    console.log('server is listening on port')
+});
