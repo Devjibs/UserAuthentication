@@ -182,4 +182,6 @@ app.post("/index", function(req, res){
     
 });
 
-app.listen(PORT);
+app.listen(PORT, function(req, res) {
+    console.log('server is listening on port')
+});
