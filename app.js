@@ -99,7 +99,6 @@ app.post("/signup", function(req, res){
         if (err) {
             console.log(err);
             res.write("<h1>Incorrect Signup Credentials, Please check your inputs and Try again</h1>");
-                res.end()
         } else {
             res.render("welcome");
             //Defining the variables to be used for email message
@@ -177,7 +176,6 @@ app.post("/index", function(req, res){
                 }
             } else {
                 res.render('404-store');
-                res.end()
             }
         }
     });
